@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="library">
+        <in>aes.c</in>
+        <in>aesni.c</in>
+        <in>arc4.c</in>
+        <in>asn1parse.c</in>
+        <in>asn1write.c</in>
+        <in>base64.c</in>
+        <in>bignum.c</in>
+        <in>blowfish.c</in>
+        <in>camellia.c</in>
+        <in>ccm.c</in>
+        <in>certs.c</in>
+        <in>cipher.c</in>
+        <in>cipher_wrap.c</in>
+        <in>cmac.c</in>
+        <in>ctr_drbg.c</in>
+        <in>debug.c</in>
+        <in>des.c</in>
+        <in>dhm.c</in>
+        <in>ecdh.c</in>
+        <in>ecdsa.c</in>
+        <in>ecjpake.c</in>
+        <in>ecp.c</in>
+        <in>ecp_curves.c</in>
+        <in>entropy.c</in>
+        <in>entropy_poll.c</in>
+        <in>error.c</in>
+        <in>gcm.c</in>
+        <in>havege.c</in>
+        <in>hmac_drbg.c</in>
+        <in>md.c</in>
+        <in>md2.c</in>
+        <in>md4.c</in>
+        <in>md5.c</in>
+        <in>md_wrap.c</in>
+        <in>memory_buffer_alloc.c</in>
+        <in>net_sockets.c</in>
+        <in>oid.c</in>
+        <in>padlock.c</in>
+        <in>pem.c</in>
+        <in>pk.c</in>
+        <in>pk_wrap.c</in>
+        <in>pkcs11.c</in>
+        <in>pkcs12.c</in>
+        <in>pkcs5.c</in>
+        <in>pkparse.c</in>
+        <in>pkwrite.c</in>
+        <in>platform.c</in>
+        <in>ripemd160.c</in>
+        <in>rsa.c</in>
+        <in>sha1.c</in>
+        <in>sha256.c</in>
+        <in>sha512.c</in>
+        <in>ssl_cache.c</in>
+        <in>ssl_ciphersuites.c</in>
+        <in>ssl_cli.c</in>
+        <in>ssl_cookie.c</in>
+        <in>ssl_srv.c</in>
+        <in>ssl_ticket.c</in>
+        <in>ssl_tls.c</in>
+        <in>threading.c</in>
+        <in>timing.c</in>
+        <in>version.c</in>
+        <in>version_features.c</in>
+        <in>x509.c</in>
+        <in>x509_create.c</in>
+        <in>x509_crl.c</in>
+        <in>x509_crt.c</in>
+        <in>x509_csr.c</in>
+        <in>x509write_crt.c</in>
+        <in>x509write_csr.c</in>
+        <in>xtea.c</in>
+      </df>
+      <df name="programs">
+        <df name="aes">
+          <in>aescrypt2.c</in>
+          <in>crypt_and_hash.c</in>
+        </df>
+        <df name="hash">
+          <in>generic_sum.c</in>
+          <in>hello.c</in>
+        </df>
+        <df name="pkey">
+          <in>dh_client.c</in>
+          <in>dh_genprime.c</in>
+          <in>dh_server.c</in>
+          <in>ecdh_curve25519.c</in>
+          <in>ecdsa.c</in>
+          <in>gen_key.c</in>
+          <in>key_app.c</in>
+          <in>key_app_writer.c</in>
+          <in>mpi_demo.c</in>
+          <in>pk_decrypt.c</in>
+          <in>pk_encrypt.c</in>
+          <in>pk_sign.c</in>
+          <in>pk_verify.c</in>
+          <in>rsa_decrypt.c</in>
+          <in>rsa_encrypt.c</in>
+          <in>rsa_genkey.c</in>
+          <in>rsa_sign.c</in>
+          <in>rsa_sign_pss.c</in>
+          <in>rsa_verify.c</in>
+          <in>rsa_verify_pss.c</in>
+        </df>
+        <df name="random">
+          <in>gen_entropy.c</in>
+          <in>gen_random_ctr_drbg.c</in>
+          <in>gen_random_havege.c</in>
+        </df>
+        <df name="ssl">
+          <in>dtls_client.c</in>
+          <in>dtls_server.c</in>
+          <in>mini_client.c</in>
+          <in>ssl_client1.c</in>
+          <in>ssl_client2.c</in>
+          <in>ssl_fork_server.c</in>
+          <in>ssl_mail_client.c</in>
+          <in>ssl_pthread_server.c</in>
+          <in>ssl_server.c</in>
+          <in>ssl_server2.c</in>
+        </df>
+        <df name="test">
+          <in>benchmark.c</in>
+          <in>selftest.c</in>
+          <in>ssl_cert_test.c</in>
+          <in>udp_proxy.c</in>
+        </df>
+        <df name="util">
+          <in>pem2der.c</in>
+          <in>strerror.c</in>
+        </df>
+        <df name="x509">
+          <in>cert_app.c</in>
+          <in>cert_req.c</in>
+          <in>cert_write.c</in>
+          <in>crl_app.c</in>
+          <in>req_app.c</in>
+        </df>
+        <in>wince_main.c</in>
+      </df>
+      <df name="yotta">
+        <df name="data">
+          <df name="example-authcrypt">
+            <in>main.cpp</in>
+          </df>
+          <df name="example-benchmark">
+            <in>main.cpp</in>
+          </df>
+          <df name="example-hashing">
+            <in>main.cpp</in>
+          </df>
+          <df name="example-selftest">
+            <in>main.cpp</in>
+          </df>
+          <in>entropy_hardware_poll.c</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile -j</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>programs\ssl\ssl_client1.exe</executablePath>
+        </makeTool>
+      </makefileType>
+      <folder path="0/library">
+        <cTool>
+          <incDir>
+            <pElem>library</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/aes">
+        <cTool>
+          <incDir>
+            <pElem>programs/aes</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/hash">
+        <cTool>
+          <incDir>
+            <pElem>programs/hash</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/pkey">
+        <cTool>
+          <incDir>
+            <pElem>programs/pkey</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/random">
+        <cTool>
+          <incDir>
+            <pElem>programs/random</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/ssl">
+        <cTool>
+          <incDir>
+            <pElem>programs/ssl</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/test">
+        <cTool>
+          <incDir>
+            <pElem>programs/test</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/util">
+        <cTool>
+          <incDir>
+            <pElem>programs/util</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/programs/x509">
+        <cTool>
+          <incDir>
+            <pElem>programs/x509</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/yotta">
+        <cTool>
+          <incDir>
+            <pElem>yotta/data</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="0/yotta/data/example-authcrypt">
+        <ccTool>
+          <incDir>
+            <pElem>yotta/data/example-authcrypt</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/yotta/data/example-benchmark">
+        <ccTool>
+          <incDir>
+            <pElem>yotta/data/example-benchmark</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/yotta/data/example-hashing">
+        <ccTool>
+          <incDir>
+            <pElem>yotta/data/example-hashing</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <folder path="0/yotta/data/example-selftest">
+        <ccTool>
+          <incDir>
+            <pElem>yotta/data/example-selftest</pElem>
+          </incDir>
+        </ccTool>
+      </folder>
+      <item path="library/aes.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/aesni.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/arc4.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/asn1parse.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/asn1write.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/base64.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/bignum.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/blowfish.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/camellia.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ccm.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/certs.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/cipher.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/cipher_wrap.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/cmac.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ctr_drbg.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/debug.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/des.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/dhm.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ecdh.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ecdsa.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ecjpake.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ecp.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ecp_curves.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/entropy.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/entropy_poll.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/error.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/gcm.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/havege.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/hmac_drbg.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/md.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/md2.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/md4.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/md5.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/md_wrap.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/memory_buffer_alloc.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/net_sockets.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/oid.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/padlock.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pem.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pk.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pk_wrap.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pkcs11.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pkcs12.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pkcs5.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pkparse.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/pkwrite.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/platform.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ripemd160.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/rsa.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/sha1.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/sha256.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/sha512.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_cache.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_ciphersuites.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_cli.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_cookie.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_srv.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_ticket.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/ssl_tls.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/threading.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/timing.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/version.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/version_features.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509_create.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509_crl.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509_crt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509_csr.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509write_crt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/x509write_csr.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="library/xtea.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/aes/aescrypt2.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/aes/crypt_and_hash.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/hash/generic_sum.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/hash/hello.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/dh_client.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/dh_genprime.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/dh_server.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/ecdh_curve25519.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/ecdsa.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/gen_key.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/key_app.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/key_app_writer.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/mpi_demo.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/pk_decrypt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/pk_encrypt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/pk_sign.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/pk_verify.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_decrypt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_encrypt.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_genkey.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_sign.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_sign_pss.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_verify.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/pkey/rsa_verify_pss.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/random/gen_entropy.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/random/gen_random_ctr_drbg.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="programs/random/gen_random_havege.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+      </item>
+      <item path="programs/ssl/dtls_client.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/dtls_server.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/mini_client.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_client1.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_client2.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_fork_server.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_mail_client.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_pthread_server.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_server.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/ssl/ssl_server2.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/test/benchmark.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/test/selftest.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/test/ssl_cert_test.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/test/udp_proxy.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/util/pem2der.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/util/strerror.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/wince_main.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <incDir>
+            <pElem>programs</pElem>
+          </incDir>
+        </cTool>
+      </item>
+      <item path="programs/x509/cert_app.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/x509/cert_req.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/x509/cert_write.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/x509/crl_app.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="programs/x509/req_app.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="yotta/data/entropy_hardware_poll.c" ex="false" tool="0" flavor2="2">
+      </item>
+      <item path="yotta/data/example-authcrypt/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="yotta/data/example-benchmark/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="yotta/data/example-hashing/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+      <item path="yotta/data/example-selftest/main.cpp"
+            ex="false"
+            tool="1"
+            flavor2="4">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="configs">
+        <in>config-ccm-psk-tls1_2.h</in>
+        <in>config-mini-tls1_1.h</in>
+        <in>config-no-entropy.h</in>
+        <in>config-picocoin.h</in>
+        <in>config-suite-b.h</in>
+        <in>config-thread.h</in>
+      </df>
+      <df name="doxygen">
+        <df name="input">
+          <in>doc_encdec.h</in>
+          <in>doc_hashing.h</in>
+          <in>doc_mainpage.h</in>
+          <in>doc_rng.h</in>
+          <in>doc_ssltls.h</in>
+          <in>doc_tcpip.h</in>
+          <in>doc_x509.h</in>
+        </df>
+      </df>
+      <df name="include">
+        <df name="mbedtls">
+          <in>aes.h</in>
+          <in>aesni.h</in>
+          <in>arc4.h</in>
+          <in>asn1.h</in>
+          <in>asn1write.h</in>
+          <in>base64.h</in>
+          <in>bignum.h</in>
+          <in>blowfish.h</in>
+          <in>bn_mul.h</in>
+          <in>camellia.h</in>
+          <in>ccm.h</in>
+          <in>certs.h</in>
+          <in>check_config.h</in>
+          <in>cipher.h</in>
+          <in>cipher_internal.h</in>
+          <in>cmac.h</in>
+          <in>compat-1.3.h</in>
+          <in>config.h</in>
+          <in>ctr_drbg.h</in>
+          <in>debug.h</in>
+          <in>des.h</in>
+          <in>dhm.h</in>
+          <in>ecdh.h</in>
+          <in>ecdsa.h</in>
+          <in>ecjpake.h</in>
+          <in>ecp.h</in>
+          <in>entropy.h</in>
+          <in>entropy_poll.h</in>
+          <in>error.h</in>
+          <in>gcm.h</in>
+          <in>havege.h</in>
+          <in>hmac_drbg.h</in>
+          <in>md.h</in>
+          <in>md2.h</in>
+          <in>md4.h</in>
+          <in>md5.h</in>
+          <in>md_internal.h</in>
+          <in>memory_buffer_alloc.h</in>
+          <in>net.h</in>
+          <in>net_sockets.h</in>
+          <in>oid.h</in>
+          <in>padlock.h</in>
+          <in>pem.h</in>
+          <in>pk.h</in>
+          <in>pk_internal.h</in>
+          <in>pkcs11.h</in>
+          <in>pkcs12.h</in>
+          <in>pkcs5.h</in>
+          <in>platform.h</in>
+          <in>platform_time.h</in>
+          <in>ripemd160.h</in>
+          <in>rsa.h</in>
+          <in>sha1.h</in>
+          <in>sha256.h</in>
+          <in>sha512.h</in>
+          <in>ssl.h</in>
+          <in>ssl_cache.h</in>
+          <in>ssl_ciphersuites.h</in>
+          <in>ssl_cookie.h</in>
+          <in>ssl_internal.h</in>
+          <in>ssl_ticket.h</in>
+          <in>threading.h</in>
+          <in>timing.h</in>
+          <in>version.h</in>
+          <in>x509.h</in>
+          <in>x509_crl.h</in>
+          <in>x509_crt.h</in>
+          <in>x509_csr.h</in>
+          <in>xtea.h</in>
+        </df>
+        <df name="sys">
+          <in>stat.h</in>
+        </df>
+        <in>dirent.h</in>
+      </df>
+      <df name="library">
+        <in>aes.c</in>
+        <in>aesni.c</in>
+        <in>arc4.c</in>
+        <in>asn1parse.c</in>
+        <in>asn1write.c</in>
+        <in>base64.c</in>
+        <in>bignum.c</in>
+        <in>blowfish.c</in>
+        <in>camellia.c</in>
+        <in>ccm.c</in>
+        <in>certs.c</in>
+        <in>cipher.c</in>
+        <in>cipher_wrap.c</in>
+        <in>cmac.c</in>
+        <in>ctr_drbg.c</in>
+        <in>debug.c</in>
+        <in>des.c</in>
+        <in>dhm.c</in>
+        <in>ecdh.c</in>
+        <in>ecdsa.c</in>
+        <in>ecjpake.c</in>
+        <in>ecp.c</in>
+        <in>ecp_curves.c</in>
+        <in>entropy.c</in>
+        <in>entropy_poll.c</in>
+        <in>error.c</in>
+        <in>gcm.c</in>
+        <in>havege.c</in>
+        <in>hmac_drbg.c</in>
+        <in>md.c</in>
+        <in>md2.c</in>
+        <in>md4.c</in>
+        <in>md5.c</in>
+        <in>md_wrap.c</in>
+        <in>memory_buffer_alloc.c</in>
+        <in>net_sockets.c</in>
+        <in>oid.c</in>
+        <in>padlock.c</in>
+        <in>pem.c</in>
+        <in>pk.c</in>
+        <in>pk_wrap.c</in>
+        <in>pkcs11.c</in>
+        <in>pkcs12.c</in>
+        <in>pkcs5.c</in>
+        <in>pkparse.c</in>
+        <in>pkwrite.c</in>
+        <in>platform.c</in>
+        <in>ripemd160.c</in>
+        <in>rsa.c</in>
+        <in>sha1.c</in>
+        <in>sha256.c</in>
+        <in>sha512.c</in>
+        <in>ssl_cache.c</in>
+        <in>ssl_ciphersuites.c</in>
+        <in>ssl_cli.c</in>
+        <in>ssl_cookie.c</in>
+        <in>ssl_srv.c</in>
+        <in>ssl_ticket.c</in>
+        <in>ssl_tls.c</in>
+        <in>threading.c</in>
+        <in>timing.c</in>
+        <in>version.c</in>
+        <in>version_features.c</in>
+        <in>x509.c</in>
+        <in>x509_create.c</in>
+        <in>x509_crl.c</in>
+        <in>x509_crt.c</in>
+        <in>x509_csr.c</in>
+        <in>x509write_crt.c</in>
+        <in>x509write_csr.c</in>
+        <in>xtea.c</in>
+      </df>
+      <df name="programs">
+        <df name="aes">
+          <in>aescrypt2.c</in>
+          <in>crypt_and_hash.c</in>
+        </df>
+        <df name="hash">
+          <in>generic_sum.c</in>
+          <in>hello.c</in>
+        </df>
+        <df name="pkey">
+          <in>dh_client.c</in>
+          <in>dh_genprime.c</in>
+          <in>dh_server.c</in>
+          <in>ecdh_curve25519.c</in>
+          <in>ecdsa.c</in>
+          <in>gen_key.c</in>
+          <in>key_app.c</in>
+          <in>key_app_writer.c</in>
+          <in>mpi_demo.c</in>
+          <in>pk_decrypt.c</in>
+          <in>pk_encrypt.c</in>
+          <in>pk_sign.c</in>
+          <in>pk_verify.c</in>
+          <in>rsa_decrypt.c</in>
+          <in>rsa_encrypt.c</in>
+          <in>rsa_genkey.c</in>
+          <in>rsa_sign.c</in>
+          <in>rsa_sign_pss.c</in>
+          <in>rsa_verify.c</in>
+          <in>rsa_verify_pss.c</in>
+        </df>
+        <df name="random">
+          <in>gen_entropy.c</in>
+          <in>gen_random_ctr_drbg.c</in>
+          <in>gen_random_havege.c</in>
+        </df>
+        <df name="ssl">
+          <in>dtls_client.c</in>
+          <in>dtls_server.c</in>
+          <in>mini_client.c</in>
+          <in>ssl_client1.c</in>
+          <in>ssl_client2.c</in>
+          <in>ssl_fork_server.c</in>
+          <in>ssl_mail_client.c</in>
+          <in>ssl_pthread_server.c</in>
+          <in>ssl_server.c</in>
+          <in>ssl_server2.c</in>
+        </df>
+        <df name="test">
+          <in>benchmark.c</in>
+          <in>selftest.c</in>
+          <in>ssl_cert_test.c</in>
+          <in>udp_proxy.c</in>
+        </df>
+        <df name="util">
+          <in>pem2der.c</in>
+          <in>strerror.c</in>
+        </df>
+        <df name="x509">
+          <in>cert_app.c</in>
+          <in>cert_req.c</in>
+          <in>cert_write.c</in>
+          <in>crl_app.c</in>
+          <in>req_app.c</in>
+        </df>
+        <in>wince_main.c</in>
+      </df>
+      <df name="scripts">
+        <df name="data_files">
+        </df>
+      </df>
+      <df name="tests">
+        <df name="data_files">
+          <df name="dir1">
+          </df>
+          <df name="dir2">
+          </df>
+          <df name="dir3">
+          </df>
+          <df name="dir4">
+          </df>
+        </df>
+        <df name="scripts">
+        </df>
+        <df name="suites">
+        </df>
+        <in>test_suite_aes.cbc.c</in>
+        <in>test_suite_aes.cfb.c</in>
+        <in>test_suite_aes.ecb.c</in>
+        <in>test_suite_aes.rest.c</in>
+        <in>test_suite_arc4.c</in>
+        <in>test_suite_asn1write.c</in>
+        <in>test_suite_base64.c</in>
+        <in>test_suite_blowfish.c</in>
+        <in>test_suite_camellia.c</in>
+        <in>test_suite_ccm.c</in>
+        <in>test_suite_cipher.aes.c</in>
+        <in>test_suite_cipher.arc4.c</in>
+        <in>test_suite_cipher.blowfish.c</in>
+        <in>test_suite_cipher.camellia.c</in>
+        <in>test_suite_cipher.ccm.c</in>
+        <in>test_suite_cipher.des.c</in>
+        <in>test_suite_cipher.gcm.c</in>
+        <in>test_suite_cipher.null.c</in>
+        <in>test_suite_cipher.padding.c</in>
+        <in>test_suite_cmac.c</in>
+        <in>test_suite_ctr_drbg.c</in>
+        <in>test_suite_debug.c</in>
+        <in>test_suite_des.c</in>
+        <in>test_suite_dhm.c</in>
+        <in>test_suite_ecdh.c</in>
+        <in>test_suite_ecdsa.c</in>
+        <in>test_suite_ecjpake.c</in>
+        <in>test_suite_ecp.c</in>
+        <in>test_suite_entropy.c</in>
+        <in>test_suite_error.c</in>
+        <in>test_suite_gcm.aes128_de.c</in>
+        <in>test_suite_gcm.aes128_en.c</in>
+        <in>test_suite_gcm.aes192_de.c</in>
+        <in>test_suite_gcm.aes192_en.c</in>
+        <in>test_suite_gcm.aes256_de.c</in>
+        <in>test_suite_gcm.aes256_en.c</in>
+        <in>test_suite_gcm.camellia.c</in>
+        <in>test_suite_hmac_drbg.misc.c</in>
+        <in>test_suite_hmac_drbg.no_reseed.c</in>
+        <in>test_suite_hmac_drbg.nopr.c</in>
+        <in>test_suite_hmac_drbg.pr.c</in>
+        <in>test_suite_md.c</in>
+        <in>test_suite_mdx.c</in>
+        <in>test_suite_memory_buffer_alloc.c</in>
+        <in>test_suite_mpi.c</in>
+        <in>test_suite_pem.c</in>
+        <in>test_suite_pk.c</in>
+        <in>test_suite_pkcs1_v15.c</in>
+        <in>test_suite_pkcs1_v21.c</in>
+        <in>test_suite_pkcs5.c</in>
+        <in>test_suite_pkparse.c</in>
+        <in>test_suite_pkwrite.c</in>
+        <in>test_suite_rsa.c</in>
+        <in>test_suite_shax.c</in>
+        <in>test_suite_ssl.c</in>
+        <in>test_suite_timing.c</in>
+        <in>test_suite_version.c</in>
+        <in>test_suite_x509parse.c</in>
+        <in>test_suite_x509write.c</in>
+        <in>test_suite_xtea.c</in>
+      </df>
+      <df name="visualc">
+        <df name="VS2010">
+        </df>
+      </df>
+      <df name="yotta">
+        <df name="data">
+          <df name="example-authcrypt">
+            <in>main.cpp</in>
+          </df>
+          <df name="example-benchmark">
+            <in>main.cpp</in>
+          </df>
+          <df name="example-hashing">
+            <in>main.cpp</in>
+          </df>
+          <df name="example-selftest">
+            <in>main.cpp</in>
+          </df>
+          <in>entropy_hardware_poll.c</in>
+          <in>target_config.h</in>
+        </df>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>3</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <console-type>2</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
