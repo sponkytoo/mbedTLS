@@ -6,10 +6,10 @@
   </DisplayManager>
   <General>
     <HarmonyPath dnOrder="0" path="../v2_03b"/>
-    <Processor dnOrder="1" name=""/>
+    <Processor dnOrder="1" name="PIC32MZ2048EFH144"/>
     <Board dnOrder="2" name=""/>
     <ForceOptimization dnOrder="3" flag="true"/>
-    <MergeStrategy dnOrder="4" flag="USER_ALL"/>
+    <MergeStrategy dnOrder="4" flag="USER_RECENT"/>
   </General>
   <Manifest>
     <Files dnOrder="0">
