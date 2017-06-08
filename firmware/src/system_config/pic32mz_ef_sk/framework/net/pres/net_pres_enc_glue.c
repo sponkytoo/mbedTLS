@@ -67,7 +67,28 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 bool Get_NTP_Time(void);
 
 
+void SYS_CMD_PRINT_BLOCKING(const char* format, ...)
+{
+    char tmpBuf[SYS_CMD_PRINT_BUFFER_SIZE];
+    uint32_t ix;
+    size_t len = 0;
+    va_list args;
+    va_start( args, format );
 
+    len = vsnprintf(tmpBuf, SYS_CMD_PRINT_BUFFER_SIZE, format, args);
+
+    va_end( args );
+
+    tmpBuf[len] = '\0';
+
+    ix = 0;
+    while (len) {
+        while (PLIB_USART_TransmitterBufferIsFull(SYS_DEBUG_UART_IDX));
+        PLIB_USART_TransmitterByteSend(SYS_DEBUG_UART_IDX, tmpBuf[ix++]);
+        len--;
+    }    
+
+}
 
 /* Repository of Documentation and Issuing CA Certificates:
  *    https://pki.google.com/

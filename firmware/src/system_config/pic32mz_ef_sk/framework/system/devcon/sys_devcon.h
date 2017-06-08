@@ -12,7 +12,7 @@
 
   Description:
     This file contains the interface definition for the Device Control System
-    Service.  It provides a way to interact with the Device Control subsystem 
+    Service.  It provides a way to interact with the Device Control subsystem
     to manage the device control requests supported by the system.
 *******************************************************************************/
 
@@ -58,7 +58,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     extern "C" {
 
 #endif
-// DOM-IGNORE-END  
+// DOM-IGNORE-END
 
 
 // *****************************************************************************
@@ -89,16 +89,16 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 /*
   Summary:
     Identifies a particular registered event instance.
-	
+
   Description:
-    SYS DEVCON Handle.     
+    SYS DEVCON Handle.
     This event handle identifies a registered instance of an event. Every
     time the application that tries to access the parameters with respect
     to a particular event, shall used this event handle to refer to that
     event.
-	
+
   Remarks:
-    None.                                                                
+    None.
 */
 
 typedef int8_t SYS_DEVCON_HANDLE;
@@ -121,7 +121,7 @@ typedef struct
 {
     /* System module initialization */
     SYS_MODULE_INIT                 moduleInit;
-    
+
 } SYS_DEVCON_INIT;
 
 
@@ -198,8 +198,8 @@ typedef enum
   Parameters:
     index           - Index for the instance to be initialized
     init            - Pointer to a data structure containing any data necessary
-                      to initialize the Device Control module. This pointer may 
-                      be null if no data is required because static overrides 
+                      to initialize the Device Control module. This pointer may
+                      be null if no data is required because static overrides
                       have been provided.
 
   Returns:
@@ -240,15 +240,15 @@ SYS_MODULE_OBJ SYS_DEVCON_Initialize( const SYS_MODULE_INDEX index,
                                const SYS_MODULE_INIT * const init )
 
    Summary:
-    Reinitializes and refreshes the hardware for the instance of the Device 
+    Reinitializes and refreshes the hardware for the instance of the Device
     Control module.
 
    Description:
-    This function reinitializes the instance of the Device Control module using 
+    This function reinitializes the instance of the Device Control module using
     the supplied data. It modifies the internal data structure.
 
   Precondition:
-    The SYS_DEVCON_Initialize function should have been called before calling this 
+    The SYS_DEVCON_Initialize function should have been called before calling this
     function.
 
   Parameters:
@@ -300,12 +300,12 @@ void SYS_DEVCON_Reinitialize( SYS_MODULE_OBJ object,
     Deinitializes the specific module instance of the DEVCON module
 
   Description:
-    This function deinitializes the specific module instance disabling its operation 
+    This function deinitializes the specific module instance disabling its operation
     (and any hardware for driver modules). Resets all of the internal data
     structures and fields for the specified instance to the default settings.
 
   Precondition:
-    The SYS_DEVCON_Initialize function should have been called before calling this 
+    The SYS_DEVCON_Initialize function should have been called before calling this
     function.
 
   Parameters:
@@ -341,7 +341,7 @@ void SYS_DEVCON_Deinitialize( SYS_MODULE_OBJ object );
 // *******************************************************************************
 /* Function:
     SYS_STATUS SYS_DEVCON_Status( SYS_MODULE_OBJ object )
-    
+
   Summary:
     Returns status of the specific instance of the Device Control module.
 
@@ -357,25 +357,25 @@ void SYS_DEVCON_Deinitialize( SYS_MODULE_OBJ object );
     object -  SYS DEVCON object handle, returned from SYS_DEVCON_Initialize
 
   Return:
-    - SYS_STATUS_READY - Indicates that any previous operations have 
-	                     succeeded and the module is ready for additional operations. 
-						 Any value greater than SYS_STATUS_READY is also a normal 
+    - SYS_STATUS_READY - Indicates that any previous operations have
+	                     succeeded and the module is ready for additional operations.
+						 Any value greater than SYS_STATUS_READY is also a normal
 						 running state in which the driver is ready to accept new operations.
-	- SYS_STATUS_BUSY  - Indicates that the driver is busy with a previous system 
+	- SYS_STATUS_BUSY  - Indicates that the driver is busy with a previous system
                          level operation and cannot start another.
-    - SYS_STATUS_ERROR - Indicates that the driver is in an error state. Any value 
+    - SYS_STATUS_ERROR - Indicates that the driver is in an error state. Any value
 	                     less than SYS_STATUS_ERROR is also an error state.
-    - SYS_MODULE_DEINITIALIZED - Indicates that the driver has been deinitialized. 
-	                             This value is less than SYS_STATUS_ERROR. Once the 
-								 Initialize operation has been called, the Deinitialize 
-								 operation must be called before the Initialize operation 
+    - SYS_MODULE_DEINITIALIZED - Indicates that the driver has been deinitialized.
+	                             This value is less than SYS_STATUS_ERROR. Once the
+								 Initialize operation has been called, the Deinitialize
+								 operation must be called before the Initialize operation
 								 can be called again.
 
   Example:
     <code>
     SYS_MODULE_OBJ      object;     // Returned from SYS_DEVCON_Initialize
     SYS_STATUS          tmrStatus;
-    
+
     devconStatus = SYS_DEVCON_Status (object);
     else if (SYS_STATUS_ERROR >= devconStatus)
     {
@@ -393,7 +393,7 @@ SYS_STATUS SYS_DEVCON_Status( SYS_MODULE_OBJ object );
 // **************************************************************************
 /*  Function:
     void SYS_DEVCON_Tasks( SYS_MODULE_OBJ object )
-    
+
   Summary:
     Maintains the system Device Control state machine.
 
@@ -414,11 +414,11 @@ SYS_STATUS SYS_DEVCON_Status( SYS_MODULE_OBJ object );
   Example:
     <code>
     SYS_MODULE_OBJ      object;     // Returned from SYS_DEVCON_Initialize
-    
+
     while (true)
     {
         SYS_DEVCON_Tasks (object);
-    
+
         // Do other tasks
     }
     </code>
@@ -426,12 +426,12 @@ SYS_STATUS SYS_DEVCON_Status( SYS_MODULE_OBJ object );
   Remarks:
     This function is normally not called directly by an application. It is
     called by the system's Tasks routine (SYS_Tasks) or by the appropriate
-    raw ISR.                                                               
+    raw ISR.
 */
 
 void SYS_DEVCON_Tasks( SYS_MODULE_OBJ object );
 
-    
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: SYS DEVCON Client Setup Routines
@@ -444,15 +444,15 @@ void SYS_DEVCON_Tasks( SYS_MODULE_OBJ object );
     void SYS_DEVCON_PerformanceConfig( unsigned int sysclk )
 
   Summary:
-    Configures the PFM wait states and Prefetch Cache module for maximum 
+    Configures the PFM wait states and Prefetch Cache module for maximum
     performance.
 
   Description:
-    This function configures the PFM wait states and Prefetch Cache module 
+    This function configures the PFM wait states and Prefetch Cache module
     for maximum performance.
 
   Precondition:
-    The SYS_DEVCON_Initialize function should have been called before calling this 
+    The SYS_DEVCON_Initialize function should have been called before calling this
     function.
 
   Parameters:
@@ -472,7 +472,6 @@ void SYS_DEVCON_Tasks( SYS_MODULE_OBJ object );
 
 void __attribute__((nomips16)) SYS_DEVCON_PerformanceConfig( unsigned int sysclk );
 
-
 // *****************************************************************************
 /* Function:
     void SYS_DEVCON_SystemUnlock( void )
@@ -481,7 +480,7 @@ void __attribute__((nomips16)) SYS_DEVCON_PerformanceConfig( unsigned int sysclk
     Performs a system unlock sequence by writing to the SYSKEY register.
 
   Description:
-    Performs a system unlock sequence by writing to the SYSKEY register. A 
+    Performs a system unlock sequence by writing to the SYSKEY register. A
     system unlock sequence is required before performing certain actions such
     as changing a clock frequency or I/O unlocking.
 
@@ -516,7 +515,7 @@ void SYS_DEVCON_SystemUnlock( void );
     Performs a system lock sequence by writing to the SYSKEY register.
 
   Description:
-    Performs a system lock sequence by writing to the SYSKEY register. A 
+    Performs a system lock sequence by writing to the SYSKEY register. A
     system lock sequence is required after performing the action that required
     a system lock sequence.
 
@@ -675,14 +674,14 @@ void SYS_DEVCON_TraceDisable( void );
     Initializes the L1 cache.
 
   Description:
-    This function initializes both instruction and data caches. Invalidates all entries 
+    This function initializes both instruction and data caches. Invalidates all entries
 	and zeros all tags. Sets coherency attribute for kseg0.
 
   Precondition:
     None.
 
   Parameters:
-    cacheCoherency  -   The desired kseg0 coherency attribute. 
+    cacheCoherency  -   The desired kseg0 coherency attribute.
 
   Returns:
     None.
@@ -708,7 +707,7 @@ void SYS_DEVCON_CacheInit(SYS_CACHE_COHERENCY cacheCoherency);
     Flushes the L1 cache.
 
   Description:
-    This function flushes both instruction and data caches. Invalidate entire 
+    This function flushes both instruction and data caches. Invalidate entire
 	 instruction cache; writes back and invalidates the entire data cache.
 
   Precondition:
@@ -803,7 +802,7 @@ void SYS_DEVCON_InstructionCacheFlush(void);
     Writes back and invalidates an address range in either cache.
 
   Description:
-    This function writes back (data) and invalidates (data and address) an address 
+    This function writes back (data) and invalidates (data and address) an address
 	range in either cache.
 
   Precondition:
@@ -999,7 +998,7 @@ void SYS_DEVCON_DataCacheLock(uint32_t addr, size_t len);
   Description:
     This function synchronizes the instruction and data caches. Used when modifying
     the instruction stream (breakpoints, self-modifying code, relocating
-    executable code to RAM). Flushes an address range from the data cache 
+    executable code to RAM). Flushes an address range from the data cache
     and invalidates that same range from the instruction cache.
 
   Precondition:
@@ -1037,7 +1036,7 @@ void SYS_DEVCON_CacheSync(uint32_t addr, size_t len);
     None.
 
   Parameters:
-    cacheCoherency  -   The desired coherency attribute. 
+    cacheCoherency  -   The desired coherency attribute.
 
   Returns:
     None.
@@ -1370,7 +1369,6 @@ size_t SYS_DEVCON_InstructionCacheSizeGet(void);
   Remarks:
     None.
 */
-
 void __attribute__((nomips16)) SYS_DEVCON_PowerModeEnter(SYS_POWER_MODE pwrMode);
 
 //DOM-IGNORE-BEGIN

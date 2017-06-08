@@ -68,13 +68,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: System Interrupt Vector Functions
 // *****************************************************************************
 // *****************************************************************************
-
-    
-void IntHandlerDrvTmrInstance0(void)
-{
-    DRV_TMR_Tasks(sysObj.drvTmr0);
-}
-  
+ 
 void IntHandlerDrvUsartTransmitInstance0(void)
 {
     DRV_USART_TasksTransmit(sysObj.drvUsart0);
@@ -99,6 +93,12 @@ void IntHandlerDrvUsartErrorInstance0(void)
  
 
  
+ 
+
+void IntHandlerDrvTmrInstance0(void)
+{
+    DRV_TMR_Tasks(sysObj.drvTmr0);
+}
  void IntHandler_ETHMAC(void)
 {
     DRV_ETHMAC_Tasks_ISR((SYS_MODULE_OBJ)0);

@@ -192,11 +192,13 @@ void BSP_LEDStateSet(BSP_LED led, BSP_LED_STATE state)
     /* Set the state of the LED */
     if(led_active_level_map[led] == BSP_LED_ACTIVE_HIGH)
     {
-        PLIB_PORTS_PinWrite (PORTS_ID_0 , led_port_channel_map[led], led_port_bit_pos_map[led], state );
+        PLIB_PORTS_PinWrite (PORTS_ID_0 , led_port_channel_map[led], led_port_bit_pos_map[led], 
+							 (BSP_LED_STATE_ON == state ? true : false));
     }
     else
     {
-        PLIB_PORTS_PinWrite (PORTS_ID_0 , led_port_channel_map[led], led_port_bit_pos_map[led], ~state );
+        PLIB_PORTS_PinWrite (PORTS_ID_0 , led_port_channel_map[led], led_port_bit_pos_map[led], 
+							 (BSP_LED_STATE_ON == state ? false : true));
     }
 }
 
@@ -236,17 +238,17 @@ void BSP_LEDToggle(BSP_LED led)
 
 BSP_LED_STATE BSP_LEDStateGet (BSP_LED led)
 {
-    BSP_LED_STATE value;
+    bool value;
 
     /* Get LED Status */
     value = PLIB_PORTS_PinGetLatched (PORTS_ID_0, led_port_channel_map[led], led_port_bit_pos_map[led]);
 
     if(led_active_level_map[led] == BSP_LED_ACTIVE_LOW)
     {
-        value = ~value;
+        value = !value;
     }
 
-    return value;
+    return (value ? BSP_LED_STATE_ON : BSP_LED_STATE_OFF);
 }
 
 // *****************************************************************************

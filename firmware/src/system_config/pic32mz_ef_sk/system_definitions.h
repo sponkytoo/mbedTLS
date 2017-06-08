@@ -36,38 +36,31 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
  *******************************************************************************/
 //DOM-IGNORE-END
-
 #ifndef _SYS_DEFINITIONS_H
 #define _SYS_DEFINITIONS_H
-
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
 #include "system/common/sys_common.h"
 #include "system/common/sys_module.h"
 #include "system/devcon/sys_devcon.h"
+      #include "system/reset/sys_reset.h"
 #include "system/clk/sys_clk.h"
 #include "system/int/sys_int.h"
 #include "system/console/sys_console.h"
 #include "system/random/sys_random.h"
 #include "system/tmr/sys_tmr.h"
-#include "system/reset/sys_reset.h"
 #include "driver/tmr/drv_tmr.h"
 #include "driver/usart/drv_usart.h"
 #include "system/ports/sys_ports.h"
- 
 #include "system/debug/sys_debug.h"
 #include "system/command/sys_command.h"
-
-
-
 #include "tcpip/tcpip.h"
 #include "driver/ethmac/drv_ethmac.h"
 #include "driver/miim/drv_miim.h"
@@ -86,7 +79,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 extern "C" {
 
 #endif
-// DOM-IGNORE-END 
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************

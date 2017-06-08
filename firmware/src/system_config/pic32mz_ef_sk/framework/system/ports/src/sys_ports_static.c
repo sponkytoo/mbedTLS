@@ -223,6 +223,26 @@ void SYS_PORTS_Write( PORTS_MODULE_ID index,
     PLIB_PORTS_Write( index, channel, value );
 }
 
+/******************************************************************************
+  Function:
+    PORTS_DATA_TYPE SYS_PORTS_LatchedGet( PORTS_MODULE_ID index, PORTS_CHANNEL channel )
+
+  Summary:
+    Reads the data driven on the I/O port.
+
+  Description:
+    This function reads the data driven on the I/O port.
+
+  Remarks:
+    None.
+*/
+
+PORTS_DATA_TYPE SYS_PORTS_LatchedGet( PORTS_MODULE_ID index, PORTS_CHANNEL channel )
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    /* TODO: Call corresponding PLIB API */
+    return 0;
+}
 
 /******************************************************************************
   Function:
@@ -398,6 +418,32 @@ void SYS_PORTS_OpenDrainDisable( PORTS_MODULE_ID index, PORTS_CHANNEL channel,
 #endif
 }
 
+// *****************************************************************************
+/* Function:
+    PORTS_DATA_TYPE SYS_PORTS_InterruptStatusGet
+    ( 
+        PORTS_MODULE_ID index, 
+        PORTS_CHANNEL channel 
+    )
+
+  Summary:
+    Reads the data from the I/O port.
+	<p><b>Implementation:</b> Dynamic</p>
+
+  Description:
+    This function reads the data from the I/O port.
+
+*/
+
+PORTS_DATA_TYPE SYS_PORTS_InterruptStatusGet
+( 
+    PORTS_MODULE_ID index, 
+    PORTS_CHANNEL channel 
+)
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    return 0;
+}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -715,6 +761,32 @@ void SYS_PORTS_PinWrite ( PORTS_MODULE_ID index,
 
 // *****************************************************************************
 /* Function:
+    bool SYS_PORTS_PinLatchedGet ( PORTS_MODULE_ID index,
+                             PORTS_CHANNEL channel,
+                             PORTS_BIT_POS bitPos )
+
+  Summary:
+    Reads the data driven on selected digital pin.
+
+  Description:
+    This function reads the driven data on selected digital pin.
+
+  Remarks:
+    None.
+*/
+
+bool SYS_PORTS_PinLatchedGet ( PORTS_MODULE_ID index,
+                         PORTS_CHANNEL channel,
+                         PORTS_BIT_POS bitPos )
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    /* TODO: Call corresponding PLIB API */
+    return false;
+}
+
+
+// *****************************************************************************
+/* Function:
     bool SYS_PORTS_PinRead ( PORTS_MODULE_ID index,
                              PORTS_CHANNEL channel,
                              PORTS_BIT_POS bitPos )
@@ -896,6 +968,147 @@ void SYS_PORTS_PinOpenDrainDisable ( PORTS_MODULE_ID index,
         PLIB_PORTS_PinOpenDrainDisable ( index, channel, bitPos );
     }
 #endif
+}
+
+
+// *****************************************************************************
+/* Function:
+    void SYS_PORTS_PinPullUpEnable ( PORTS_MODULE_ID index, 
+                                        PORTS_CHANNEL channel,
+                                        PORTS_BIT_POS bitPos )
+
+  Summary:
+    Enables the pull-up functionality for the selected pin.
+	<p><b>Implementation:</b> Dynamic</p>
+
+  Description:
+    This function enables the pull-up functionality for the selected pin.
+
+  Remarks:
+    Not all features are available on all devices. Refer to the specific device
+    data sheet for availability.
+*/
+
+void SYS_PORTS_PinPullUpEnable ( PORTS_MODULE_ID index, 
+                                    PORTS_CHANNEL channel,
+                                    PORTS_BIT_POS bitPos )
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    return;
+}
+
+
+// *****************************************************************************
+/* Function:
+    void SYS_PORTS_PinPullUpDisable ( PORTS_MODULE_ID index, 
+                                         PORTS_CHANNEL channel,
+                                         PORTS_BIT_POS bitPos )
+
+  Summary:
+    Disables the pull-up functionality for the selected pin.
+	<p><b>Implementation:</b> Dynamic</p>
+
+  Description:
+    This function disables the pull-up functionality for the selected pin.
+
+  Remarks:
+    Not all features are available on all devices. Refer to the specific device
+    data sheet for availability.
+*/
+
+void SYS_PORTS_PinPullUpDisable ( PORTS_MODULE_ID index, 
+                                     PORTS_CHANNEL channel,
+                                     PORTS_BIT_POS bitPos )
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    return;
+}
+
+
+// *****************************************************************************
+/* Function:
+    void SYS_PORTS_PinPullDownEnable ( PORTS_MODULE_ID index, 
+                                        PORTS_CHANNEL channel,
+                                        PORTS_BIT_POS bitPos )
+
+  Summary:
+    Enables the pull-down functionality for the selected pin.
+	<p><b>Implementation:</b> Dynamic</p>
+
+  Description:
+    This function enables the pull-down functionality for the selected pin.
+
+  Remarks:
+    Not all features are available on all devices. Refer to the specific device
+    data sheet for availability.
+*/
+
+void SYS_PORTS_PinPullDownEnable ( PORTS_MODULE_ID index, 
+                                    PORTS_CHANNEL channel,
+                                    PORTS_BIT_POS bitPos )
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    return;
+}
+
+
+// *****************************************************************************
+/* Function:
+    void SYS_PORTS_PinPullDownDisable ( PORTS_MODULE_ID index, 
+                                         PORTS_CHANNEL channel,
+                                         PORTS_BIT_POS bitPos )
+
+  Summary:
+    Disables the pull-down functionality for the selected pin.
+	<p><b>Implementation:</b> Dynamic</p>
+
+  Description:
+    This function disables the pull-down functionality for the selected pin.
+
+  Remarks:
+    Not all features are available on all devices. Refer to the specific device
+    data sheet for availability.
+*/
+
+void SYS_PORTS_PinPullDownDisable ( PORTS_MODULE_ID index, 
+                                     PORTS_CHANNEL channel,
+                                     PORTS_BIT_POS bitPos )
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    return;
+}
+                                     
+                                     
+/******************************************************************************
+  Function:
+    void SYS_PORTS_InterruptEnable
+    (
+        PORTS_MODULE_ID index,
+        PORTS_CHANNEL channel,
+        PORTS_BIT_POS bitPos,
+        PORTS_PIN_INTERRUPT_TYPE pinInterruptType
+    )
+
+  Summary:
+    Enables the change notification interrupt for the selected port pin.
+
+  Description:
+    This function enables the change notification interrupt of selected type
+    for the selected port pin.
+
+  Remarks:
+    None.
+*/
+void SYS_PORTS_InterruptEnable
+(
+    PORTS_MODULE_ID index,
+    PORTS_CHANNEL channel,
+    PORTS_BIT_POS bitPos,
+    PORTS_PIN_INTERRUPT_TYPE pinInterruptType
+)
+{
+    SYS_ASSERT(false, "This API is not supported on this device");
+    return;
 }
 
 

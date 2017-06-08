@@ -18,7 +18,7 @@
     definitions for build-time configuration options that are not instantiated
     until used by another MPLAB Harmony module or application.
 
-    Created with MPLAB Harmony Version 2.02
+    Created with MPLAB Harmony Version 2.03
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -76,8 +76,8 @@ extern "C" {
 // *****************************************************************************
 /* Common System Service Configuration Options
 */
-#define SYS_VERSION_STR           "2.02"
-#define SYS_VERSION               20200
+#define SYS_VERSION_STR           "2.03"
+#define SYS_VERSION               20300
 
 // *****************************************************************************
 /* Clock System Service Configuration Options
@@ -92,9 +92,6 @@ extern "C" {
 #define SYS_CLK_BUS_PERIPHERAL_8            200000000ul
 #define SYS_CLK_CONFIG_PRIMARY_XTAL         24000000ul
 #define SYS_CLK_CONFIG_SECONDARY_XTAL       32768ul
-#define SYS_CLK_CONFIG_FREQ_ERROR_LIMIT     10
-#define SYS_CLK_WAIT_FOR_SWITCH             true
-#define SYS_CLK_ON_WAIT                     OSC_ON_WAIT_IDLE 
  
 /*** Ports System Service Configuration ***/
 #define SYS_PORT_A_ANSEL        0x3F20
@@ -332,6 +329,10 @@ extern "C" {
 #define TCPIP_STACK_TICK_RATE		        		5
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
 
+#define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
+
+#define TCPIP_PACKET_LOG_ENABLE     0
+
 /* TCP/IP stack event notification */
 #define TCPIP_STACK_USE_EVENT_NOTIFICATION
 #define TCPIP_STACK_USER_NOTIFICATION   false
@@ -369,6 +370,7 @@ extern "C" {
 #define TCPIP_ARP_CACHE_ENTRY_RETRIES		    		3
 #define TCPIP_ARP_GRATUITOUS_PROBE_COUNT			1
 #define TCPIP_ARP_TASK_PROCESS_RATE		        	2
+#define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
 
 /*** DHCP Configuration ***/
 #define TCPIP_STACK_USE_DHCP_CLIENT
@@ -439,8 +441,6 @@ extern "C" {
 
 /*** TCP Configuration ***/
 #define TCPIP_TCP_MAX_SEG_SIZE_TX		        	1460
-#define TCPIP_TCP_MAX_SEG_SIZE_RX_LOCAL		    		1460
-#define TCPIP_TCP_MAX_SEG_SIZE_RX_NON_LOCAL			536
 #define TCPIP_TCP_SOCKET_DEFAULT_TX_SIZE			1024
 #define TCPIP_TCP_SOCKET_DEFAULT_RX_SIZE			1024
 #define TCPIP_TCP_DYNAMIC_OPTIONS             			true
@@ -464,16 +464,20 @@ extern "C" {
 #define TCPIP_STACK_USE_ANNOUNCE
 #define TCPIP_ANNOUNCE_MAX_PAYLOAD 	512
 #define TCPIP_ANNOUNCE_TASK_RATE    333
+#define TCPIP_ANNOUNCE_NETWORK_DIRECTED_BCAST             			false
 
 /*** TCPIP MAC Configuration ***/
-#define TCPIP_EMAC_TX_DESCRIPTORS				8
-#define TCPIP_EMAC_RX_DESCRIPTORS				6
+#define TCPIP_EMAC_TX_DESCRIPTORS				    8
+#define TCPIP_EMAC_RX_DESCRIPTORS				    6
 #define TCPIP_EMAC_RX_DEDICATED_BUFFERS				4
 #define TCPIP_EMAC_RX_INIT_BUFFERS				    0
 #define TCPIP_EMAC_RX_LOW_THRESHOLD				    1
 #define TCPIP_EMAC_RX_LOW_FILL				        2
+#define TCPIP_EMAC_MAX_FRAME		    			1536
+#define TCPIP_EMAC_LINK_MTU		    			    1500
 #define TCPIP_EMAC_RX_BUFF_SIZE		    			1536
-#define TCPIP_EMAC_RX_MAX_FRAME		    			1536
+#define TCPIP_EMAC_RX_FRAGMENTS		    			1
+
 #define TCPIP_EMAC_RX_FILTERS                       \
                                                     TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
                                                     TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
@@ -481,7 +485,6 @@ extern "C" {
                                                     TCPIP_MAC_RX_FILTER_TYPE_RUNT_REJECT |\
                                                     TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
                                                     0
-#define TCPIP_EMAC_RX_FRAGMENTS		    			1
 #define TCPIP_EMAC_ETH_OPEN_FLAGS       			\
                                                     TCPIP_ETH_OPEN_AUTO |\
                                                     TCPIP_ETH_OPEN_FDUPLEX |\
