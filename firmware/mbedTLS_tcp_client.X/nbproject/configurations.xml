@@ -400,6 +400,77 @@
         <itemPath>../../../v2_03b/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="third_party" projectFiles="true">
+        <logicalFolder name="f2" displayName="mbedTLS" projectFiles="true">
+          <itemPath>../src/mbedtls-development/include/mbedtls/aes.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/aesni.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/arc4.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/asn1.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/asn1write.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/base64.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/bignum.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/blowfish.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/bn_mul.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/camellia.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ccm.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/certs.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/check_config.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/cipher.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/cipher_internal.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/cmac.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/compat-1.3.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/config.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ctr_drbg.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/debug.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/des.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/dhm.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ecdh.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ecdsa.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ecjpake.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ecp.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/entropy.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/entropy_poll.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/error.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/gcm.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/havege.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/hmac_drbg.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/md.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/md2.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/md4.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/md5.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/md_internal.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/memory_buffer_alloc.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/net.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/net_sockets.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/oid.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/padlock.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/pem.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/pk.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/pk_internal.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/pkcs11.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/pkcs12.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/pkcs5.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/platform.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/platform_time.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ripemd160.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/rsa.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/sha1.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/sha256.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/sha512.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ssl.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ssl_cache.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ssl_ciphersuites.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ssl_cookie.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ssl_internal.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/ssl_ticket.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/threading.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/timing.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/version.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/x509.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/x509_crl.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/x509_crt.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/x509_csr.h</itemPath>
+          <itemPath>../src/mbedtls-development/include/mbedtls/xtea.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="f1" displayName="tcpip" projectFiles="true">
           <logicalFolder name="f1" displayName="wolfssl" projectFiles="true">
             <logicalFolder name="f2" displayName="cyassl" projectFiles="true">
@@ -613,34 +684,6 @@
               <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/internal.h</itemPath>
               <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/version.h</itemPath>
             </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="f2" displayName="wolfssl" projectFiles="true">
-          <logicalFolder name="f1" displayName="wolfcrypt" projectFiles="true">
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/asn_public.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2-impl.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2-int.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/blake2.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/camellia.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/chacha.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/chacha20_poly1305.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/curve25519.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/dh.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/dsa.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ed25519.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/error-crypt.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/fe_operations.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/fips_test.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ge_operations.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md2.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/md4.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/mpi_class.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/mpi_superclass.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/pkcs7.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/poly1305.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
-            <itemPath>../../../v2_03b/third_party/tcpip/wolfssl/wolfssl/wolfcrypt/ripemd.h</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>

@@ -158,12 +158,6 @@ typedef struct {
 } net_pres_mbedTLSInfo;
 
 
-typedef struct {
-    WOLFSSL_CTX *wolfssl_context;
-    NET_PRES_TransportObject *transObject;
-    bool isInited;
-} net_pres_wolfsslInfo;
-
 mbedtls_ssl_session saved_session;
 
 void *my_calloc(size_t n, size_t ElementSize) {
@@ -205,20 +199,20 @@ void GetTimeString(char *str);
  ******************************************************************************/
 // <editor-fold defaultstate="collapsed" desc="Stream Client 1 Functions">
 
-NET_PRES_EncProviderObject net_pres_EncProviderStreamClient1 = {
-    .fpInit = NET_PRES_EncProviderStreamClientInit1,
-    .fpDeinit = NET_PRES_EncProviderStreamClientDeinit1,
-    .fpOpen = NET_PRES_EncProviderStreamClientOpen1,
-    .fpConnect = NET_PRES_EncProviderClientConnect1,
-    .fpClose = NET_PRES_EncProviderConnectionClose1,
-    .fpWrite = NET_PRES_EncProviderWrite1,
-    .fpWriteReady = NET_PRES_EncProviderWriteReady1,
-    .fpRead = NET_PRES_EncProviderRead1,
-    .fpReadReady = NET_PRES_EncProviderReadReady1,
-    .fpPeek = NET_PRES_EncProviderPeek1,
-    .fpIsInited = NET_PRES_EncProviderStreamClientIsInited1,
+NET_PRES_EncProviderObject net_pres_EncProviderStreamClient0 = {
+    .fpInit = NET_PRES_EncProviderStreamClientInit0,
+    .fpDeinit = NET_PRES_EncProviderStreamClientDeinit0,
+    .fpOpen = NET_PRES_EncProviderStreamClientOpen0,
+    .fpConnect = NET_PRES_EncProviderClientConnect0,
+    .fpClose = NET_PRES_EncProviderConnectionClose0,
+    .fpWrite = NET_PRES_EncProviderWrite0,
+    .fpWriteReady = NET_PRES_EncProviderWriteReady0,
+    .fpRead = NET_PRES_EncProviderRead0,
+    .fpReadReady = NET_PRES_EncProviderReadReady0,
+    .fpPeek = NET_PRES_EncProviderPeek0,
+    .fpIsInited = NET_PRES_EncProviderStreamClientIsInited0,
 };
-net_pres_mbedTLSInfo net_pres_mbedTLSInfoStreamClient1;
+net_pres_mbedTLSInfo net_pres_mbedTLSInfoStreamClient0;
 
 int NET_PRES_EncGlue_StreamClientReceiveCb1(void *ctx, unsigned char *buf, size_t len) {
     uint16_t bufferSize;
@@ -229,7 +223,7 @@ int NET_PRES_EncGlue_StreamClientReceiveCb1(void *ctx, unsigned char *buf, size_
         return ( MBEDTLS_ERR_NET_INVALID_CONTEXT);
 
     do {
-        bufferSize = (*net_pres_mbedTLSInfoStreamClient1.transObject->fpRead)((uintptr_t) fd, (uint8_t*) buf, len);
+        bufferSize = (*net_pres_mbedTLSInfoStreamClient0.transObject->fpRead)((uintptr_t) fd, (uint8_t*) buf, len);
         buf += bufferSize;
         len -= bufferSize;
         ncount += bufferSize;
@@ -243,14 +237,14 @@ int NET_PRES_EncGlue_StreamClientSendCb1(void *ctx, const unsigned char *buf, si
     int fd = *(int *) ctx;
     uint16_t bufferSize;
 
-    bufferSize = (*net_pres_mbedTLSInfoStreamClient1.transObject->fpWrite)((uintptr_t) fd, (uint8_t*) buf, (uint16_t) len);
+    bufferSize = (*net_pres_mbedTLSInfoStreamClient0.transObject->fpWrite)((uintptr_t) fd, (uint8_t*) buf, (uint16_t) len);
 
     return bufferSize;
 }
 
 uint32_t ssl_init_flag = 0;
 
-bool NET_PRES_EncProviderStreamClientInit1(NET_PRES_TransportObject * transObject) {
+bool NET_PRES_EncProviderStreamClientInit0(NET_PRES_TransportObject * transObject) {
     int ret = 0;
 
 #if defined(MBEDTLS_DEBUG_C)
@@ -272,15 +266,15 @@ bool NET_PRES_EncProviderStreamClientInit1(NET_PRES_TransportObject * transObjec
             (const unsigned char *) mbed_ctx.pers,
             strlen(mbed_ctx.pers))) != 0) {
         NPEG_DEBUG_PRINT(" failed\n  ! mbedtls_ctr_drbg_seed returned %d\r\n", ret);
-        NET_PRES_EncProviderStreamClientDeinit1();
+        NET_PRES_EncProviderStreamClientDeinit0();
         return ret;
     }
 
     NPEG_DEBUG_PRINT(" ok\r\n");
 
-    net_pres_mbedTLSInfoStreamClient1.transObject = transObject;
-    net_pres_mbedTLSInfoStreamClient1.mbedtls_context = &mbed_ctx;
-    if (net_pres_mbedTLSInfoStreamClient1.mbedtls_context == 0) {
+    net_pres_mbedTLSInfoStreamClient0.transObject = transObject;
+    net_pres_mbedTLSInfoStreamClient0.mbedtls_context = &mbed_ctx;
+    if (net_pres_mbedTLSInfoStreamClient0.mbedtls_context == 0) {
         return false;
     }
 
@@ -298,7 +292,7 @@ bool NET_PRES_EncProviderStreamClientInit1(NET_PRES_TransportObject * transObjec
             (const unsigned char *) mbed_ctx.pers,
             strlen(mbed_ctx.pers))) != 0) {
         NPEG_DEBUG_PRINT(" failed\n  ! mbedtls_ctr_drbg_seed returned %d\r\n", ret);
-        NET_PRES_EncProviderStreamClientDeinit1();
+        NET_PRES_EncProviderStreamClientDeinit0();
         return ret;
     }
 
@@ -318,7 +312,7 @@ bool NET_PRES_EncProviderStreamClientInit1(NET_PRES_TransportObject * transObjec
 
     if (ret < 0) {
         NPEG_DEBUG_PRINT(" failed\r\n  !  mbedtls_x509_crt_parse returned -0x%x\r\n", -ret);
-        NET_PRES_EncProviderStreamClientDeinit1();
+        NET_PRES_EncProviderStreamClientDeinit0();
         return ret;
     }
 
@@ -326,11 +320,11 @@ bool NET_PRES_EncProviderStreamClientInit1(NET_PRES_TransportObject * transObjec
     return true;
 }
 
-bool NET_PRES_EncProviderStreamClientDeinit1() {
+bool NET_PRES_EncProviderStreamClientDeinit0() {
 
     NPEG_DEBUG_PRINT(" mbedTLS NET_PRES_EncProviderStreamClientDeinit1\r\n");
 
-    net_pres_mbedTLSInfoStreamClient1.isInited = false;
+    net_pres_mbedTLSInfoStreamClient0.isInited = false;
     NPEG_DEBUG_PRINT(" mbedTLS Deinit Ready\r\n");
 
     return true;
@@ -339,7 +333,7 @@ bool NET_PRES_EncProviderStreamClientDeinit1() {
 
 uint32_t open_flag = 0;
 
-bool NET_PRES_EncProviderStreamClientOpen1(uintptr_t transHandle, void * providerData) {
+bool NET_PRES_EncProviderStreamClientOpen0(uintptr_t transHandle, void * providerData) {
     bool ret = 0;
 
     NPEG_DEBUG_PRINT(" mbedTLS NET_PRES_EncProviderStreamClientOpen1 %d\r\n", transHandle);
@@ -357,7 +351,7 @@ bool NET_PRES_EncProviderStreamClientOpen1(uintptr_t transHandle, void * provide
             MBEDTLS_SSL_TRANSPORT_STREAM,
             MBEDTLS_SSL_PRESET_DEFAULT)) != 0) {
         NPEG_DEBUG_PRINT(" failed\n  ! mbedtls_ssl_config_defaults returned %d\n\n", ret);
-        NET_PRES_EncProviderStreamClientDeinit1();
+        NET_PRES_EncProviderStreamClientDeinit0();
         return ret;
     }
 
@@ -371,30 +365,30 @@ bool NET_PRES_EncProviderStreamClientOpen1(uintptr_t transHandle, void * provide
     mbedtls_ssl_conf_rng(&mbed_ctx.conf, mbedtls_ctr_drbg_random, & mbed_ctx.ctr_drbg);
     mbedtls_ssl_conf_dbg(&mbed_ctx.conf, my_debug, stdout);
 
-    net_pres_mbedTLSInfoStreamClient1.isInited = true;
+    net_pres_mbedTLSInfoStreamClient0.isInited = true;
 
     (&mbed_ctx)->server_fd.fd = (int) transHandle;
     if ((ret = mbedtls_ssl_setup(&mbed_ctx.ssl, &mbed_ctx.conf)) != 0) {
         NPEG_DEBUG_PRINT(" failed\n  ! mbedtls_ssl_setup returned %d\r\n", ret);
-        NET_PRES_EncProviderStreamClientDeinit1();
+        NET_PRES_EncProviderStreamClientDeinit0();
         return false;
     }
 
     mbed_ctx.server_name = (char *) GetHostName();
     if ((ret = mbedtls_ssl_set_hostname(&mbed_ctx.ssl, mbed_ctx.server_name)) != 0) {
         NPEG_DEBUG_PRINT(" failed\n  ! mbedtls_ssl_set_hostname returned %d\r\n", ret);
-        NET_PRES_EncProviderStreamClientDeinit1();
+        NET_PRES_EncProviderStreamClientDeinit0();
         return false;
     }
 
     return true;
 }
 
-bool NET_PRES_EncProviderStreamClientIsInited1() {
-    return net_pres_mbedTLSInfoStreamClient1.isInited;
+bool NET_PRES_EncProviderStreamClientIsInited0() {
+    return net_pres_mbedTLSInfoStreamClient0.isInited;
 }
 
-NET_PRES_EncSessionStatus NET_PRES_EncProviderClientConnect1(void * providerData) {
+NET_PRES_EncSessionStatus NET_PRES_EncProviderClientConnect0(void * providerData) {
     int ret;
     char str[100];
 
@@ -411,7 +405,7 @@ NET_PRES_EncSessionStatus NET_PRES_EncProviderClientConnect1(void * providerData
     while ((ret = mbedtls_ssl_handshake(&mbed_ctx.ssl)) != 0) {
         if (ret != MBEDTLS_ERR_SSL_WANT_READ && ret != MBEDTLS_ERR_SSL_WANT_WRITE) {
             NPEG_DEBUG_PRINT(" failed\n\r  ! mbedtls_ssl_handshake returned -0x%x\r\n", -ret);
-            NET_PRES_EncProviderStreamClientDeinit1();
+            NET_PRES_EncProviderStreamClientDeinit0();
             return ret;
         }
     }
@@ -436,7 +430,7 @@ NET_PRES_EncSessionStatus NET_PRES_EncProviderClientConnect1(void * providerData
     return NET_PRES_ENC_SS_OPEN;
 }
 
-NET_PRES_EncSessionStatus NET_PRES_EncProviderConnectionClose1(void * providerData) {
+NET_PRES_EncSessionStatus NET_PRES_EncProviderConnectionClose0(void * providerData) {
 
     NPEG_DEBUG_PRINT(" mbedTLS NET_PRES_EncProviderConnectionClose1\r\n");
 
@@ -446,37 +440,37 @@ NET_PRES_EncSessionStatus NET_PRES_EncProviderConnectionClose1(void * providerDa
     return NET_PRES_ENC_SS_CLOSED;
 }
 
-int32_t NET_PRES_EncProviderWrite1(void * providerData, const uint8_t * buffer, uint16_t size) {
+int32_t NET_PRES_EncProviderWrite0(void * providerData, const uint8_t * buffer, uint16_t size) {
     int ret;
     //    NPEG_DEBUG_PRINT(" mbedTLS Write %d\r\n", size);
     while ((ret = mbedtls_ssl_write(&mbed_ctx.ssl, buffer, size)) <= 0) {
         if (ret != MBEDTLS_ERR_SSL_WANT_READ && ret != MBEDTLS_ERR_SSL_WANT_WRITE) {
             //            NPEG_DEBUG_PRINT(" failed\n  ! mbedtls_ssl_write returned %d\r\n", ret);
-            NET_PRES_EncProviderStreamClientDeinit1();
+            NET_PRES_EncProviderStreamClientDeinit0();
         }
     }
     return ret;
 }
 
-uint16_t NET_PRES_EncProviderWriteReady1(void * providerData, uint16_t reqSize, uint16_t minSize) {
+uint16_t NET_PRES_EncProviderWriteReady0(void * providerData, uint16_t reqSize, uint16_t minSize) {
     return reqSize;
 }
 
-int32_t NET_PRES_EncProviderRead1(void * providerData, uint8_t * buffer, uint16_t size) {
+int32_t NET_PRES_EncProviderRead0(void * providerData, uint8_t * buffer, uint16_t size) {
     int ret;
     ret = mbedtls_ssl_read(&mbed_ctx.ssl, buffer, size);
     return ret;
 }
 
-int32_t NET_PRES_EncProviderReadReady1(void * providerData) {
+int32_t NET_PRES_EncProviderReadReady0(void * providerData) {
     int ret = 0;
 
-    ret = (*net_pres_mbedTLSInfoStreamClient1.transObject->fpReadyToRead)((uintptr_t) mbed_ctx.server_fd.fd);
+    ret = (*net_pres_mbedTLSInfoStreamClient0.transObject->fpReadyToRead)((uintptr_t) mbed_ctx.server_fd.fd);
 
     return ret;
 }
 
-int32_t NET_PRES_EncProviderPeek1(void * providerData, uint8_t * buffer, uint16_t size) {
+int32_t NET_PRES_EncProviderPeek0(void * providerData, uint8_t * buffer, uint16_t size) {
     return 0;
 }
 
