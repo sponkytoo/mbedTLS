@@ -18,7 +18,7 @@
     definitions for build-time configuration options that are not instantiated
     until used by another MPLAB Harmony module or application.
 
-    Created with MPLAB Harmony Version 2.03
+    Created with MPLAB Harmony Version 2.04
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -76,8 +76,8 @@ extern "C" {
 // *****************************************************************************
 /* Common System Service Configuration Options
 */
-#define SYS_VERSION_STR           "2.03"
-#define SYS_VERSION               20300
+#define SYS_VERSION_STR           "2.04"
+#define SYS_VERSION               20400
 
 // *****************************************************************************
 /* Clock System Service Configuration Options
@@ -307,7 +307,14 @@ extern "C" {
 // *****************************************************************************
 /*** Crypto Library Configuration ***/
 
+#define WC_NO_HARDEN
+#define MICROCHIP_MPLAB_HARMONY
 #define HAVE_MCAPI
+#if defined(__PIC32C__)
+#define MICROCHIP_PIC32C
+#else
+#define MICROCHIP_PIC32
+#endif
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/
 #define NET_PRES_NUM_INSTANCE 1
@@ -339,11 +346,14 @@ extern "C" {
 #define TCPIP_STACK_DOWN_OPERATION   true
 #define TCPIP_STACK_IF_UP_DOWN_OPERATION   true
 #define TCPIP_STACK_MAC_DOWN_OPERATION  true
+#define TCPIP_STACK_INTERFACE_CHANGE_SIGNALING   false
 #define TCPIP_STACK_CONFIGURATION_SAVE_RESTORE   true
 /*** TCPIP Heap Configuration ***/
+
 #define TCPIP_STACK_USE_INTERNAL_HEAP
 #define TCPIP_STACK_DRAM_SIZE                       39250
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
+
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
 
 #define TCPIP_STACK_CALLOC_FUNC                     calloc
@@ -374,13 +384,12 @@ extern "C" {
 
 /*** DHCP Configuration ***/
 #define TCPIP_STACK_USE_DHCP_CLIENT
-#define TCPIP_DHCP_TIMEOUT		        		2
-#define TCPIP_DHCP_TASK_TICK_RATE	    			5
-#define TCPIP_DHCP_HOST_NAME_SIZE	    			20
-#define TCPIP_DHCP_CLIENT_CONNECT_PORT  			68
-#define TCPIP_DHCP_SERVER_LISTEN_PORT				67
-#define TCPIP_DHCP_CLIENT_ENABLED             			true
-
+#define TCPIP_DHCP_TIMEOUT                          2
+#define TCPIP_DHCP_TASK_TICK_RATE                   5
+#define TCPIP_DHCP_HOST_NAME_SIZE                   20
+#define TCPIP_DHCP_CLIENT_CONNECT_PORT              68
+#define TCPIP_DHCP_SERVER_LISTEN_PORT               67
+#define TCPIP_DHCP_CLIENT_ENABLED                   true
 
 
 /*** DNS Client Configuration ***/
@@ -521,6 +530,10 @@ extern "C" {
 #define DRV_ETHPHY_NEG_DONE_TMO		    			2000
 #define DRV_ETHPHY_RESET_CLR_TMO				500
 #define DRV_ETHPHY_USE_DRV_MIIM                     true
+#define TCPIP_EMAC_AUTO_FLOW_CONTROL_ENABLE        	true
+#define TCPIP_EMAC_FLOW_CONTROL_PAUSE_BYTES         3072
+#define TCPIP_EMAC_FLOW_CONTROL_FULL_WMARK          2
+#define TCPIP_EMAC_FLOW_CONTROL_EMPTY_WMARK         0
 
 
 

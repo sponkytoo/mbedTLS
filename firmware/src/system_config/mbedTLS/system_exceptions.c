@@ -75,7 +75,8 @@ static unsigned int _excep_addr;
 static char *_cause_str;
 
 /* Array identifying the cause (indexed by _exception_code). */
-static char *cause[] = {
+static char *cause[] = 
+{
     "Interrupt",
     "Undefined",
     "Undefined",

@@ -9,9 +9,9 @@
 
   Description:
     This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, defines the configuration bits, 
-    and allocates any necessary global system resources, such as the 
-    sysObj structure that contains the object handles to all the MPLAB Harmony 
+    implements the "SYS_Initialize" function, defines the configuration bits,
+    and allocates any necessary global system resources, such as the
+    sysObj structure that contains the object handles to all the MPLAB Harmony
     module objects in the system.
  *******************************************************************************/
 
@@ -134,7 +134,7 @@ const DRV_TMR_INIT drvTmr0InitData =
 {
     .moduleInit.sys.powerState = DRV_TMR_POWER_STATE_IDX0,
     .tmrId = DRV_TMR_PERIPHERAL_ID_IDX0,
-    .clockSource = DRV_TMR_CLOCK_SOURCE_IDX0, 
+    .clockSource = DRV_TMR_CLOCK_SOURCE_IDX0,
     .prescale = DRV_TMR_PRESCALE_IDX0,
     .mode = DRV_TMR_OPERATION_MODE_IDX0,
     .interruptSource = DRV_TMR_INTERRUPT_SOURCE_IDX0,
@@ -425,6 +425,7 @@ const TCPIP_NBNS_MODULE_CONFIG tcpipNBNSInitData =
 /*** ETH PHY Initialization Data ***/
 
 
+
 const DRV_ETHPHY_INIT tcpipPhyInitData =
 {
     .moduleInit             = {SYS_MODULE_POWER_RUN_FULL},
@@ -454,6 +455,7 @@ const TCPIP_MODULE_MAC_PIC32INT_CONFIG tcpipMACPIC32INTInitData =
     .pPhyBase               = &DRV_ETHPHY_OBJECT_BASE_Default,
     .pPhyInit               = &tcpipPhyInitData,
 };
+
 
 
 
@@ -628,7 +630,7 @@ void SYS_Initialize ( void* data )
 
     /*** TMR Service Initialization Code ***/
     sysObj.sysTmr  = SYS_TMR_Initialize(SYS_TMR_INDEX_0, (const SYS_MODULE_INIT  * const)&sysTmrInitData);
-  
+
     /* Initialize Middleware */
     sysObj.netPres = NET_PRES_Initialize(0, (SYS_MODULE_INIT*)&netPresInitData);
 
@@ -637,7 +639,6 @@ void SYS_Initialize ( void* data )
 
     /* set sub-priority for ETHERNET interrupt source */
     SYS_INT_VectorSubprioritySet(INT_VECTOR_ETH, INT_SUBPRIORITY_LEVEL3);
-    
     /* TCPIP Stack Initialization */
     sysObj.tcpip = TCPIP_STACK_Init();
     SYS_ASSERT(sysObj.tcpip != SYS_MODULE_OBJ_INVALID, "TCPIP_STACK_Init Failed" );

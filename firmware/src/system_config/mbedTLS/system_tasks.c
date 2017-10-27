@@ -67,6 +67,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
  
 static void _SYS_Tasks ( void );
 void _SYS_TMR_Tasks(void);
+ 
+ 
 void _TCPIP_Tasks(void);
 static void _APP_Tasks(void);
 
@@ -99,6 +101,8 @@ void SYS_Tasks ( void )
                 "SYS_TMR Tasks",
                 1024, NULL, 1, NULL);
 
+ 
+ 
 
     /* Create task for TCPIP state machine*/
     /* Create OS Thread for TCPIP Tasks. */
@@ -136,6 +140,8 @@ static void _SYS_Tasks ( void)
 
         /* Maintain Device Drivers */
     DRV_MIIM_Tasks (sysObj.drvMiim);
+ 
+ 
 
         /* Maintain Middleware */
     NET_PRES_Tasks(sysObj.netPres);
@@ -153,6 +159,8 @@ void _SYS_TMR_Tasks(void)
         vTaskDelay(5 / portTICK_PERIOD_MS);
     }
  }
+ 
+ 
 void _TCPIP_Tasks(void)
 {
     while(1)
@@ -184,4 +192,3 @@ static void _APP_Tasks(void)
 /*******************************************************************************
  End of File
  */
-

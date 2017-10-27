@@ -583,7 +583,7 @@ bool Get_NTP_Time(void) {
     do {
         vTaskDelay(500 / portTICK_PERIOD_MS);
         SYS_CONSOLE_PRINT(".");
-        TCPIP_SNTP_TimeStampGet(&MyEpocheRcv.u64, &LastUpdate);
+        TCPIP_SNTP_TimeStampGet((TCPIP_SNTP_TIME_STAMP*)&MyEpocheRcv.u64, &LastUpdate);
         if (--count == 0) {
             SYS_CONSOLE_PRINT("\r\n NTP Timeout\r\n");
             return false;
@@ -613,7 +613,7 @@ void GetTimeString(char *str) {
 
 int gettimeofday(void *pTime, void *p) {
     uint32_t LastUpdate = 0;
-    TCPIP_SNTP_TimeStampGet((uint64_t*) pTime, &LastUpdate);
+    TCPIP_SNTP_TimeStampGet((TCPIP_SNTP_TIME_STAMP*) pTime, &LastUpdate);
     return 0;
 }
 
