@@ -1,5 +1,5 @@
 # mbedTLS
-Shows how to use mbedTLS with Microchips Harmony Framework
+Shows how to use mbedTLS with Microchips Harmony Framework 2.04
 
 - the used Hardware is the PIC32MZ2048EFH144 Ethernet Starterkit with the MCP2221 UART CDC-USB. 
   The real UART2 of the PIC is used for debugging and is connected to the MCP2221. 
