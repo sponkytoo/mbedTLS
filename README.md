@@ -1,5 +1,5 @@
 # mbedTLS
-Shows how to use mbedTLS with Microchips Harmony Framework 2.04
+Shows how to use mbedTLS with Microchips Harmony Framework 2.04 on a PIC32MZ2048EFH144 Ethernet Starterkit with console interface on UART2 (routed to MCP2221 Chip)
 
 - the used Hardware is the PIC32MZ2048EFH144 Ethernet Starterkit with the MCP2221 UART CDC-USB. 
   The real UART2 of the PIC is used for debugging and is connected to the MCP2221. 
@@ -7,4 +7,4 @@ Shows how to use mbedTLS with Microchips Harmony Framework 2.04
 - Works with Harmony 2_04
 - The Heap Managment is currently very wastefully adjusted. Should be alingned to the needs of the actual application.
 
-
+![Console Example Output](console_example.png)
