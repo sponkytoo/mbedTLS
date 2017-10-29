@@ -1,0 +1,4 @@
+device PIC32MZ2048EFH144
+hwtool SK -p
+program "./dist/mbedTLS/production/mbedTLS_tcp_client.X.production.elf"
+quit
