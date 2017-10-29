@@ -392,7 +392,7 @@ NET_PRES_EncSessionStatus NET_PRES_EncProviderClientConnect0(void * providerData
     int ret;
     char str[100];
 
-    NPEG_DEBUG_PRINT(" mbedTLS NET_PRES_EncProviderClientConnect1\r\n");
+    //NPEG_DEBUG_PRINT(" mbedTLS NET_PRES_EncProviderClientConnect0\r\n");
 
     GetTimeString(str);
     SYS_CONSOLE_PRINT("\n\rUTC-0: %s\n\r", str);

@@ -1529,7 +1529,7 @@ int mbedtls_x509_crt_verify_info( char *buf, size_t size, const char *prefix,
         if( ( flags & cur->code ) == 0 )
             continue;
 
-        ret = mbedtls_snprintf( p, n, "%s%s\n", prefix, cur->string );
+        ret = mbedtls_snprintf( p, n, "%s%s\n\r", prefix, cur->string );
         MBEDTLS_X509_SAFE_SNPRINTF;
         flags ^= cur->code;
     }
